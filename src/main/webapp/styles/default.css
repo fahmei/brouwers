@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+body{
+	background: #f7d8a5;
+}
+
+nav>ol>li{
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 0; 
+}
+
+nav>ol>li>a{
+	padding: 0.5em 1em;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	background:  #f7d8a5;
+}
+
+nav>ol>li>a:hover{
+	background:  #8a5b0d;
+	color: white;
+}
+
+h1 {
+	text-align: center
+}
