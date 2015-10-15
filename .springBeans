@@ -21,6 +21,7 @@
 			<configs>
 				<config>java:be.vdab.dao.CreateDAOBeans</config>
 				<config>java:be.vdab.services.CreateServiceBeans</config>
+				<config>java:be.vdab.web.CreateControllerBeans</config>
 			</configs>
 			<profiles>
 			</profiles>

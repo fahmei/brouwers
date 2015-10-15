@@ -9,5 +9,6 @@ public interface BrouwerService {
 	void create(Brouwer brouwer);
 	List<Brouwer> findAll();
 	List<Brouwer> findByNaam(String beginNaam);
+	List<Brouwer> findByFirstLetter(Character gekozenLetter);
 	
 }

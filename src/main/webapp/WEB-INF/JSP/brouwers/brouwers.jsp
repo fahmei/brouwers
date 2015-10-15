@@ -12,9 +12,38 @@
 
 <body>
 
-<v:menu/>
+	<v:menu />
 
 	<h1>Alle Brouwers</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nummer</th>
+				<th>Naam</th>
+				<th>Straat</th>
+				<th>HuisNr</th>
+				<th>Postcode</th>
+				<th>Gemeente</th>
+				<th>Omzet</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="brouwer" items="${brouwers}">
+				<tr>
+					<td class='recht'>${brouwer.brouwerNr}</td>
+					<td>${brouwer.naam}</td>
+					<td>${brouwer.adres.straat}</td>
+					<td>${brouwer.adres.huisNr}</td>
+					<td>${brouwer.adres.postcode}</td>
+					<td>${brouwer.adres.gemeente}</td>
+					<td class='recht'><c:if test="${not empty brouwer.omzet}">${brouwer.omzet}</c:if>
+						<c:if test="${empty brouwer.omzet}">nb</c:if>
+					</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 
 </body>
 

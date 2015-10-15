@@ -2,7 +2,7 @@
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 
 <nav>
-	<ol>
+	<ol class="inlineLijst">
 		<li><a href="<c:url value='/'/>">Hoofdpagina</a></li>
 		<li><a href="<c:url value='/brouwers'/>">Alle brouwers</a></li>
 		<li><a href="<c:url value='/brouwers/beginnaam'/>">Brouwers op naam</a></li>

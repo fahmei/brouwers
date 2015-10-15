@@ -33,4 +33,9 @@ class BrouwerServiceImpl implements BrouwerService {
 		return brouwerDAO.findByNaam(beginNaam);
 	}
 
+	@Override
+	public List<Brouwer> findByFirstLetter(Character gekozenLetter) {
+		return brouwerDAO.findByFirstLetter(gekozenLetter);
+	}
+
 }

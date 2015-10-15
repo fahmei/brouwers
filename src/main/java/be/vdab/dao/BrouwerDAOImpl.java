@@ -14,8 +14,7 @@ import be.vdab.valueobjects.Adres;
 class BrouwerDAOImpl implements BrouwerDAO {
 
 	private final Map<Long, Brouwer> brouwers = new ConcurrentHashMap<>();
-	
-	
+
 	public BrouwerDAOImpl() {
 		brouwers.put(1L, new Brouwer(1L, "brouwer1", new Adres("straat", "12a", 1000, "Brussel"), null));
 		brouwers.put(2L, new Brouwer(2L, "brouwer2", new Adres("straat", "19a", 1000, "Brussel"), 50000));
@@ -28,16 +27,29 @@ class BrouwerDAOImpl implements BrouwerDAO {
 	}
 
 	@Override
-	public List<Brouwer> findAll() { 
+	public List<Brouwer> findAll() {
 		return new ArrayList<>(brouwers.values());
 	}
 
 	@Override
 	public List<Brouwer> findByNaam(String beginNaam) {
 		List<Brouwer> gevondenBrouwers = new ArrayList<>();
-		
-		for(Brouwer brouwer: brouwers.values()){
-			if(brouwer.getNaam().contains(beginNaam)){
+
+		for (Brouwer brouwer : brouwers.values()) {
+			if (brouwer.getNaam().contains(beginNaam)) {
+				gevondenBrouwers.add(brouwer);
+			}
+		}
+		return gevondenBrouwers;
+	}
+
+	@Override
+	public List<Brouwer> findByFirstLetter(Character gekozenLetter) {
+		List<Brouwer> gevondenBrouwers = new ArrayList<>();
+
+		for (Brouwer brouwer : brouwers.values()) {
+			if (brouwer.getNaam().charAt(0) == Character.toLowerCase(gekozenLetter)
+					|| brouwer.getNaam().charAt(0) == Character.toUpperCase(gekozenLetter)) {
 				gevondenBrouwers.add(brouwer);
 			}
 		}
