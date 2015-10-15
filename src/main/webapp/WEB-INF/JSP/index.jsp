@@ -1,6 +1,7 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <%@taglib prefix='v' uri='http://vdab.be/tags'%>
+<%@taglib prefix='spring' uri='http://www.springframework.org/tags'%>
 
 <!doctype html>
 
@@ -15,7 +16,7 @@
 
 <v:menu/>
 
-<h1>Welkom</h1>	
+<h1><spring:message code="${welkomBericht}"/></h1>	
 
 </body>
 
