@@ -8,14 +8,14 @@
 <html lang='nl'>
 
 <head>
-<v:head title="Brouwers op naam" />
+<v:head title="Brouwers alfabetisch" />
 </head>
 
 <body>
 
 	<v:menu />
 
-	<h1>Brouwers op naam</h1>
+	<h1>Brouwers alfabetisch</h1>
 
 	<ol class="inlineLijst">
 		<c:forEach var="letter" items="${letters}">
@@ -27,13 +27,7 @@
 		</c:forEach>
 	</ol>
 
-	<c:if test="${not empty brouwers}">
-		<ol class="namenLijst">
-			<c:forEach var="brouwer" items="${brouwers}">
-				<li>${brouwer.naam}</li>
-			</c:forEach>
-		</ol>
-	</c:if>
+	<v:lijstBrouwers brouwers='${brouwers}'/>
 </body>
 
 </html>

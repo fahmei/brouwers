@@ -5,7 +5,8 @@
 	<ol class="inlineLijst">
 		<li><a href="<c:url value='/'/>">Hoofdpagina</a></li>
 		<li><a href="<c:url value='/brouwers'/>">Alle brouwers</a></li>
-		<li><a href="<c:url value='/brouwers/beginnaam'/>">Brouwers op naam</a></li>
+		<li><a href="<c:url value='/brouwers/beginnaam'/>">Brouwers alfabetisch</a></li>
+		<li><a href="<c:url value='/brouwers/opnaam'/>">Brouwers op naam</a></li>
 		<li><a href="<c:url value='/brouwers/toevoegen'/>">Brouwer toevoegen</a></li>
 		
 		<c:if test='${pageContext.response.locale.language != "nl"}'>

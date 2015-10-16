@@ -18,4 +18,9 @@
 	</tag-file>
 
 
+	<tag-file>
+		<name>lijstBrouwers</name>
+		<path>/WEB-INF/tags/lijstBrouwers.tag</path>
+	</tag-file>
+
 </taglib>
