@@ -1,38 +1,52 @@
 @CHARSET "UTF-8";
 
-body{
+body {
 	background: #f7d8a5;
 }
 
-.inlineLijst>li{
-	display: inline-block;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	border: 0; 
+nav {
+	text-align: center;
 }
 
-.inlineLijst>li>a{
+.inlineLijst>li {
+	display: inline-block;
+	list-style: none;
+	padding: 1em 0;
+	margin: 0;
+	border: 0;
+}
+
+.inlineLijst>li>a {
 	padding: 0.5em 1em;
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
-	background:  #f7d8a5;
+	background: #f7d8a5;
 }
 
-.inlineLijst>li>a:hover{
-	background:  #8a5b0d;
+th a {
+	text-decoration: none;
 	color: white;
 }
 
-.namenLijst{
+.inlineLijst>li>a:hover {
+	background: #8a5b0d;
+	color: white;
+}
+
+.namenLijst {
 	padding: 0.2em 1em;
 	margin-left: 5em;
 	list-style: circle;
+	font-size: 1.2em;
 }
 
 h1 {
 	text-align: center
+}
+
+table {
+	margin-left: 3em;
 }
 
 th {
@@ -41,10 +55,80 @@ th {
 	background: #8a5b0d;
 }
 
-.rechts{
+.rechts {
 	text-align: right;
 }
 
-td, th{
+td, th {
 	padding: 0.2em 1em;
+}
+
+tbody>tr:nth-child(even)>td, thead>tr>th {
+	box-shadow: 1px 1px 1px black;
+}
+
+tr:nth-child(even) {
+	background: #e7c1a0;
+}
+
+td:nth-child(1), td:nth-child(4), td:nth-child(5), td:nth-child(7) {
+	padding-right: 0.1em;
+	text-align: right;
+}
+
+td:nth-child(8) {
+	text-align: center;
+}
+
+td:nth-child(8) a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+.pageNumbers {
+	margin-left: 3em;
+	padding-top: 1em;
+}
+
+.pageNumbers a, .pageNumbers span {
+	font-size: 1.2em;
+	padding: 0.3em;
+}
+
+.pageNumbers a {
+	background: #8a5b0d;
+	color: white;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.pageNumbers .geselecteerd {
+	background: #e7c1a0;
+	padding: 0.5em;
+	font-weight: bolder;
+	font-size: 1.3em;
+	box-shadow: 2px 2px 2px black;
+}
+
+label>span {
+	color: red;
+	font-weight: bold;
+}
+
+div {
+	margin-top: 0.5em;
+}
+
+label, input {
+	display: block;
+}
+
+input {
+	margin-left: 0.5em;
+	margin-bottom: 1em;
+}
+
+.fout{
+	color: red;
 }

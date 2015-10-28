@@ -16,14 +16,15 @@
 
 	<v:menu />
 
-	<h1>Brouwers op naam</h1>
+	<h1><spring:message code="BrouwersOpNaam"/></h1>
 	
 	<c:url value='/brouwers/opnaam' var='url'/>
 	
 	<form:form action='${url}' commandName='deelVanNaam' method='get'>
-		<form:label path="deelVanNaam">Begin van de naam</form:label>
-		<form:input path="deelVanNaam" required='required' autofocus='autofocus' type='text'/>
-		<input type='submit' value='zoeken'>
+		<div><form:label path="deelVanNaam"><spring:message code="DeelVanDeNaam"/></form:label></div>
+		<div><form:input path="deelVanNaam" required='required' autofocus='autofocus' type='text'/></div>
+		<div><input type='submit' value='<spring:message code="zoeken"/>'></div>
+		<div class="fout"><form:errors class="fout" path="deelVanNaam"/></div>
 	</form:form>
 	
 	<v:lijstBrouwers brouwers='${brouwers}'/>

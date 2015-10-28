@@ -15,7 +15,7 @@
 
 	<v:menu />
 
-	<h1>Brouwers alfabetisch</h1>
+	<h1><spring:message code="BrouwersAlfabetisch"/></h1>
 
 	<ol class="inlineLijst">
 		<c:forEach var="letter" items="${letters}">

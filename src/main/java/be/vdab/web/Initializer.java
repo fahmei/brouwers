@@ -2,11 +2,14 @@ package be.vdab.web;
 
 
 import javax.servlet.Filter;
+import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import be.vdab.dao.CreateDAOBeans;
+import be.vdab.datasource.CreateDataSourceBean;
+import be.vdab.restservices.CreateRestControllerBeans;
 import be.vdab.services.CreateServiceBeans;
 
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -18,12 +21,12 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 	
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] {CreateDAOBeans.class, CreateServiceBeans.class};
+		return new Class<?>[] {CreateDataSourceBean.class, CreateDAOBeans.class, CreateServiceBeans.class};
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] {CreateControllerBeans.class};
+		return new Class<?>[] {CreateRestControllerBeans.class, CreateControllerBeans.class};
 	}
 
 	@Override
@@ -33,4 +36,8 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 		return new Filter[]{utf8Filter};
 	}
 
+	@Override
+	protected void customizeRegistration(Dynamic registration){
+		registration.setInitParameter("dispatchOptionRequest", "true");
+	}
 }
