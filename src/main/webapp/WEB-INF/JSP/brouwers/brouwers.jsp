@@ -2,6 +2,7 @@
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <%@taglib prefix='v' uri='http://vdab.be/tags'%>
 <%@taglib prefix='spring' uri='http://www.springframework.org/tags'%>
+<%@taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt'%>
 
 <!doctype html>
 
@@ -46,6 +47,7 @@
 						${(not empty brouwer.omzet)? brouwer.omzet : '<spring:message code="nb" />'}
 					</td>
 					<td>
+						<fmt:message key='temperatuurEenheid' var='temperatuurEenheid'/>
 						<spring:url value='/temperatuur/huidigetemperatuur/{gemeente}' var="temperatuururl">
 							<spring:param name='gemeente' value='${brouwer.adres.gemeente}' />
 						</spring:url>

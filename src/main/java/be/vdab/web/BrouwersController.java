@@ -29,7 +29,7 @@ class BrouwersController {
 	private static final String BROUWERS_TERUG_NAAR_VIEW = "redirect:/brouwers";
 	
 	private final BrouwerService brouwerService;
-
+	
 	private char[] alfabet = new char['Z' - 'A'];
 
 	@Autowired

@@ -7,18 +7,27 @@
 <!doctype html>
 <html lang='nl'>
 
-	<head><v:head title="temperatuur" /></head>
-	<body>
-		
-		<c:choose>
-			<c:when test="${empty fout}">
-				<h1>In ${param.gemeente} is het &deg;C <fmt:formatNumber value="${temperatuur}"/></h1>
-			</c:when>
-			<c:otherwise>
-				<h1 class='fout'>${fout}</h1>
-			</c:otherwise>
-		</c:choose>
-	
-	</body>
-	
+<head>
+<v:head title="temperatuur" />
+</head>
+<body>
+
+	<v:menu />
+
+	<c:choose>
+		<c:when test="${empty fout}">
+			<h1>
+				<spring:message code="temperatuurTitel" />
+				${gemeente} :
+				<spring:message code="temperatuurSymbool" />
+				<fmt:formatNumber value="${temperatuur}" />
+			</h1>
+		</c:when>
+		<c:otherwise>
+			<h1 class='fout'>${fout}</h1>
+		</c:otherwise>
+	</c:choose>
+
+</body>
+
 </html>
