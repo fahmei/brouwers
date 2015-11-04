@@ -17,7 +17,7 @@
 
 	<h1><spring:message code="BrouwersAlfabetisch"/></h1>
 
-	<ol class="inlineLijst">
+	<ol class="alfabetlijst">
 		<c:forEach var="letter" items="${letters}">
 			<li><a
 				href=" 	<spring:url value="/brouwers/beginnaam/{gekozenLetter}">

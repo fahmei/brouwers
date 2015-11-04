@@ -2,22 +2,46 @@
 
 body {
 	background: #f7d8a5;
+	margin: 0 1em;
 }
 
-nav {
-	text-align: center;
-}
-
-.inlineLijst>li {
-	display: inline-block;
+.alfabetlijst>li {
+	display: block;
 	list-style: none;
-	padding: 1em 0;
+	padding: 1em 0 0 0;
 	margin: 0;
 	border: 0;
 }
 
-.inlineLijst>li>a {
-	padding: 0.5em 1em;
+.inlineLijst{
+	float: right;
+	position: relative;
+	right: 1em;
+	border-left: 2px solid #603917;
+	border-bottom: 2px solid #603917;
+	margin: 0;
+	padding: 0 0 0.5em 0;
+}
+
+.alfabetlijst{
+	float: left;
+	position: relative;
+	left: 1em;
+	border-left: 2px solid #603917;
+	margin: 0;
+	padding: 0 0 0.5em 0;
+}
+
+.inlineLijst>li {
+	display: block;
+	list-style: none;
+	padding: 1em 0 0 0;
+	margin: 0;
+	border: 0;
+}
+
+.inlineLijst>li>a, .alfabetlijst>li>a {
+	padding: 0.5em 1em 0.5em 1em;
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
@@ -29,17 +53,11 @@ th a {
 	color: white;
 }
 
-.inlineLijst>li>a:hover {
+.inlineLijst>li>a:hover, .alfabetlijst>li>a:hover {
 	background: #8a5b0d;
 	color: white;
 }
 
-.namenLijst {
-	padding: 0.2em 1em;
-	margin-left: 5em;
-	list-style: circle;
-	font-size: 1.2em;
-}
 
 h1 {
 	text-align: center
@@ -63,11 +81,23 @@ td, th {
 	padding: 0.2em 1em;
 }
 
-tbody>tr:nth-child(even)>td, thead>tr>th {
+.namenLijst{
+	list-style: none;
+	float: left;
+	
+}
+.namenLijst>li{
+	display: block;
+	padding: 0.1em 0.2em;
+	margin-left: 3em;
+	font-weight: bold;
+}
+
+tbody>tr:nth-child(even)>td, thead>tr>th, .namenLijst>li:nth-child(even) {
 	box-shadow: 1px 1px 1px black;
 }
 
-tr:nth-child(even) {
+tr:nth-child(even), .namenLijst>li:nth-child(even) {
 	background: #e7c1a0;
 }
 
@@ -131,4 +161,38 @@ input {
 
 .fout{
 	color: red;
+}
+
+
+
+.login{
+	margin: 0;
+	padding: 0.1em;
+	height: 1.5em;
+	background: #603917;
+}
+
+.login a, .login input{
+	font-family: sans-serif;
+	font-size: 1em;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	float: right;
+	position: relative;
+	right: 1em;
+}
+
+.login a:hover, .login input:hover{
+	text-shadow: 0px 0px 20px white;
+	cursor: pointer;
+}
+
+
+.login input{
+	background: transparent;
+	border: none;
+	position: relative;
+	right: 1em;
+
 }

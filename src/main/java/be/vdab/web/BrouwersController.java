@@ -30,7 +30,7 @@ class BrouwersController {
 	
 	private final BrouwerService brouwerService;
 	
-	private char[] alfabet = new char['Z' - 'A'];
+	private char[] alfabet = new char['Z' - 'A' + 1];
 
 	@Autowired
 	public BrouwersController(BrouwerService brouwerService) {
